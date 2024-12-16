@@ -82,7 +82,7 @@ public:
             }
         }
         return true;
-        /* TODO: return true if one's tiles are all revealed */
+        /* TODO */
     }
 };
 
@@ -117,7 +117,7 @@ public:
         numCenter--;
         return centerTiles[23-numCenter];
     
-        /* TODO: draw one tile from center tiles */
+        /* TODO */
     }   
     int input_num(string A){
         if (A == "1") return 1;
@@ -150,8 +150,7 @@ public:
             centerTiles[i].status = TileStatus::HIDDEN;
         }
 
-        /* TODO: initialize tiles with input.txt file */
-
+        /* TODO */
     }  
 
     void initializePlayerTiles() {
@@ -164,7 +163,7 @@ public:
         players[0].sortTiles();
         players[1].sortTiles();
 
-        /* TODO: make each player draw 4 tiles */
+        /* TODO */
 
     }
     
@@ -183,7 +182,7 @@ public:
 
     bool makeGuess( /* TODO */ Player& targetPlayer, int targetTileIndex, int guess_num) {
         
-        /* TODO: check and return if the guess was correct */
+        /* TODO */
         
             if(targetPlayer.getTile(targetTileIndex).number == guess_num){
                 targetPlayer.getTile(targetTileIndex).status = TileStatus::REVEALED;
@@ -192,8 +191,6 @@ public:
             else{
                 return false;
             }
-        /* if the guess was correct, target tile should be revealed */
-
     }
 
     void play() {
@@ -229,7 +226,7 @@ public:
                 clue_number = currentPlayer.getTile(currentPlayer.getNumTiles()-1).number;
                 clue_color = currentPlayer.getTile(currentPlayer.getNumTiles()-1).color;
                 currentPlayer.sortTiles();
-                /* TODO: make currentPlayer recieve one clue tile */
+                /* TODO */
 
                 /* DO NOT MODIFY the output format! */
 
@@ -243,7 +240,7 @@ public:
             Player& targetPlayer = players[targetPlayerIndex];
 
             
-            /* TODO: guess number of target tile */         
+            /* TODO */         
             int q = 0;
             while(1){
                 if(!targetPlayer.isTileRevealed(q)) break;
@@ -331,7 +328,7 @@ public:
                 ofs << "Incorrect guess! Player " << currentPlayerIndex + 1 << " reveals a clue tile. \n" << endl;
                 if (!currentPlayer.allTilesRevealed()) {
 
-                    /* TODO: reveal one tile of currentPlayer */
+                    /* TODO */
                 
                     int k = 0;
                     while(1){
